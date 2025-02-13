@@ -40,6 +40,6 @@ const cart = [
 
   const fruits = ["Apples", "Oranges"]
 
-  for(const [index, fruits] of fruits.entries()){
-    console.log(`Index: ${index}, Fruit: ${fruits}`)
+  for(const [index, fruit] of fruits.entries()){
+    console.log(`Index: ${index}, Fruit: ${fruit}`)
   }
