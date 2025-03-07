@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
 </head>
+
 <body>
 
   <h1>Axios Post</h1>
@@ -22,15 +24,16 @@
 
     const createPost = () => {
       axios.post('https://jsonplaceholder.typicode.com/posts', payLoad)
-      .then(response => {
-        document.getElementById('axiosResponse').innerHTML = `<b>Post</b>: ${response.data.title}`
-      })
-      .catch(error => {
-        console.error("Error: ", error)     // Logging
-        document.getElementById("axiosResponse").innerHTML = `Error . ${error.message}`   // User-friendly localized feedback
-      })
+        .then(response => {
+          document.getElementById('axiosResponse').innerHTML = `<b>Post</b>: ${response.data.body}`
+        })
+        .catch(error => {
+          console.error("Error: ", error)     // Logging
+          document.getElementById("axiosResponse").innerHTML = `Error . ${error.message}`   // User-friendly localized feedback
+        })
     }
   </script>
- 
+
 </body>
+
 </html>
