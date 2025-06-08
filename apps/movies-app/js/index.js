@@ -5,11 +5,17 @@ let movieData = null;
 $(function () {
   
   $('#searchInput').on('input', function () {
-    clearTimeout(debounceTimeout)
+    clearTimeout(debounceTimeout);
     showComponent('#waiting');
-    debounceTimeout = setTimeout(() => {}, 1500)
-    hideComponent('#waiting');
-  })
+    
+    const title = $(this).val().trim();  
+    
+    debounceTimeout = setTimeout(() => {
+        getMovie(title);  
+    }, 1500);
+
+   
+});
 
 
     
